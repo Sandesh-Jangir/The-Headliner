@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
-    <title>Top Headlines</title>
+    <title>The Headliner</title>
 </head>
+
 <body>
     <h1>Global Headlines From BBC News</h1>
 
-    <div class="card">
-        <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem accusantium qui assumenda, alias et nisi omnis dolorum recusandae cupiditate veniam pariatur? Corporis laborum ex molestiae. Delectus minima excepturi doloremque illo!</div>
-        <a href="#" class="link">Read On BBC &#8594;</a>
+    <div id="headlines">
+
     </div>
 
+
     <script type="text/javascript" src="/eel.js"></script>
+
+    <!-- Custom Javascript -->
+    <script>
+        async function main() {
+            var bbc_data = await eel.bbc_data()();
+            for (let index = 0; index < bbc_data.length; index++) {
+                var headlines = document.getElementById("headlines");
+                var headline = bbc_data[index];
+
+                // Adding Data in #headlines
+                headlines.innerHTML += `<div class="card">
+                                        <div class="description">${headline['description']}</div>
+                                        <a href="${headline['url']}" target="_blank" class="link">Read On BBC &#8594;</a>
+                                    </div>`;
+                console.log(headline['description'])
+            }
+        }
+
+        main();
+    </script>
 </body>
+
 </html>
