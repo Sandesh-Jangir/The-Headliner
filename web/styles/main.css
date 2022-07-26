@@ -10,15 +10,28 @@ h1{
     margin: 2.5rem auto;
     color: var(--main-text-color);
 }
+#headlines{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 80vw;
+    margin: 0px auto;
+}
 .card{
     background: var(--main-text-color);
     color: white;
-    width: 50vw;
     text-align: justify;
     padding: 20px;
-    margin: 2rem auto;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.card img{
+    width: 150px;
+    height: 120px;
+    border-radius: 5px;
+    margin-right: 20px;
 }
 .description{
     margin-bottom: 20px;

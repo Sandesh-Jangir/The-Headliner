@@ -12,9 +12,7 @@
 <body>
     <h1>Global Headlines From BBC News</h1>
 
-    <div id="headlines">
-
-    </div>
+    <div id="headlines"></div>
 
 
     <script type="text/javascript" src="/eel.js"></script>
@@ -29,19 +27,18 @@
 
                 // Adding Data in #headlines
                 headlines.innerHTML += `<div class="card">
-                                        <div class="description">${headline['description']}</div>
-                                        <a href="${headline['url']}" target="_blank" class="link">Read On BBC &#8594;</a>
+                                        <img src="${headline["urlToImage"]}">
+                                        <div class="text">
+                                            <div class="description">${headline['description']}</div>
+                                            <a href="${headline['url']}" target="_blank" class="link">Read On BBC &#8594;</a>
+                                        </div>
                                     </div>`;
-                console.log(headline['description'])
+                console.log(headline)
             }
         }
 
         main();
     </script>
 </body>
-<<<<<<< HEAD
 
 </html>
-=======
-</html>
->>>>>>> d34ec2fab06df58dbcba61b58e17e41354298b5c
