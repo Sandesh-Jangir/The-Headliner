@@ -41,3 +41,26 @@ h1{
     font-size: 15px;
     text-decoration: none;
 }
+@media (max-width:1000px) {
+    #headlines{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:550px) {
+    *{
+        font-size: x-small;
+    }
+    .card a{
+        font-size: small;
+    }
+    .description{
+        margin-bottom: 10px;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    .card img{
+        width: 100px;
+        height: 70px;
+    }
+}
