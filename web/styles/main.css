@@ -44,26 +44,23 @@ h1{
     font-size: 15px;
     text-decoration: none;
 }
-@media (max-width:1000px) {
-    #headlines{
-        grid-template-columns: 1fr;
+@media (max-width:750px) {
+    h1{
+        font-size: 2.5rem;
     }
-}
-@media (max-width:550px) {
-    *{
-        font-size: x-small;
+    .card{
+        flex-direction: column;
     }
-    .card a{
-        font-size: small;
+    .card img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        margin-bottom: 20px;
     }
     .description{
-        margin-bottom: 10px;
+        padding: 0;
     }
-    h1{
-        font-size: 1.5rem;
-    }
-    .card img{
-        width: 100px;
-        height: 70px;
+    .text{
+        padding: 0px 20px 20px 20px;
     }
 }
