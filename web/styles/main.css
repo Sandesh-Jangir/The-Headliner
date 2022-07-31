@@ -16,7 +16,7 @@ h1{
 }
 .card{
     border: 1.5px solid var(--main-text-color);
-    background: #f3f3f3;
+    background: var(--card-bg);
     color: var(--main-text-color);
     text-align: justify;
     min-height: 25vh;
