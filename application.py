@@ -10,4 +10,4 @@ def bbc_data():
     news_py = json.loads(news)
     articles = news_py['articles']
     return articles
-eel.start("index.html")
+eel.start("Home.html")
